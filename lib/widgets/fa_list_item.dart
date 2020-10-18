@@ -22,18 +22,22 @@ class FAListItem extends StatelessWidget {
           data.airline.country,
           textAlign: TextAlign.justify,
         ),
+        Text(
+          data.airline.slogan,
+          textAlign: TextAlign.justify,
+        ),
         const SizedBox(height: 20),
         data.airline?.logo == null
             ? Container()
             : Image.network(
-          data.airline.logo,
-          loadingBuilder: (context, widget, imageChunkEvent) {
-            return imageChunkEvent == null
-                ? widget
-                : CircularProgressIndicator();
-          },
-          height: 300,
-        ),
+                data.airline.logo,
+                loadingBuilder: (context, widget, imageChunkEvent) {
+                  return imageChunkEvent == null
+                      ? widget
+                      : CircularProgressIndicator();
+                },
+                height: 300,
+              ),
       ],
     );
   }
