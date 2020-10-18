@@ -1,13 +1,18 @@
 # flutterfakeairlines
 
-A new Flutter application.
+A Fake Airlines Flutter application.
 
 ## Getting Started
 
-This project is using a fake api calls from 
+This project is using fake api calls from 
 [instantwebtools](https://www.instantwebtools.net/fake-rest-api)
 
-Example of a GET call:
+Screen consists of passengers list (downloaded by chunks of 10 while scrolled till the end), 
+and a text field, which takes an integer number of the page, which need to be downloaded.
+List items can be expanded showing an additional information (airline logo and country).
+
+
+Example of a GET call (with page number(0) and response limit(10) ):
 
 ```
 https://api.instantwebtools.net/v1/passenger?page=0&size=10
